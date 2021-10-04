@@ -1,0 +1,9 @@
+body {
+  background: linear-gradient(gray -50%, black);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
