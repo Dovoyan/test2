@@ -4,7 +4,8 @@ import MultiPlayer from "./Song";
 import "./SongList.css"
 
 export default function SongList() {
-  const [array, setArray] = useState([
+
+  const songs = [
     {
       id: 0,
       SongLink: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
@@ -25,7 +26,17 @@ export default function SongList() {
       Data: '13 days ago',
       Like: localStorage.getItem(1),
     },
-  ]);
+  ]
+
+  songs.map((player, i) => {
+    if (!localStorage.getItem(i)) {
+      localStorage.setItem(i, 0)
+    }
+  }
+  )
+
+
+  const [array, setArray] = useState(songs);
 
 
 
